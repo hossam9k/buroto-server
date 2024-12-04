@@ -1,10 +1,10 @@
-
 [versions]
 kotlin-version = "2.1.0"
 ktor-version = "3.0.1"
 logback-version = "1.4.14"
 kotlin-serialization-plugin = "1.9.10"
 koin-bom = "4.1.0-Beta1"
+default-header = "2.0.1"
 
 [libraries]
 ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation-jvm", version.ref = "ktor-version" }
@@ -17,8 +17,9 @@ ktor-server-test-host = { module = "io.ktor:ktor-server-test-host-jvm", version.
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin-version" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-core = { module = "io.insert-koin:koin-core" }
-koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version = "boin-bom" }
-
+koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version = "koin-bom" }
+koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version = "koin-bom" }
+ktor-server-default-headers = { group = "io.ktor", name = "ktor-server-default-headers", version = "default-header" }
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-version" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor-version" }

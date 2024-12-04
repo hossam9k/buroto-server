@@ -1,5 +1,6 @@
 package com.boruto
 
+import com.boruto.plugins.*
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -7,7 +8,9 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    configureKoin()
     configureSerialization()
     configureMonitoring()
     configureRouting()
+    configureDefaultHeader()
 }
